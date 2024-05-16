@@ -1,5 +1,4 @@
 window.addEventListener("load", () => {
-  //checking if its mobile or not
   const ThereIsMobile = document.querySelector(".there-is-mobile");
   const sliderContainer = document.getElementById("wkode-slider-container");
   const sliderContainerMobile = document.getElementById(
@@ -24,7 +23,6 @@ window.addEventListener("load", () => {
   const prevBtn = document.querySelector(".wkode-slider-prev");
   const nextBtn = document.querySelector(".wkode-slider-next");
   const dots = document.querySelector(".wkode-slider-dots");
-  const progressBar = document.querySelector(".wkode-slider-progress-bar");
 
   let currentSlide = 0;
   let interval = setInterval(nextSlide, 5000);
@@ -42,8 +40,6 @@ window.addEventListener("load", () => {
         clearInterval(interval);
         setSlide();
         interval = setInterval(nextSlide, 5000);
-        resetProgressBar();
-        startProgressBar();
       });
     }
   }
@@ -51,7 +47,6 @@ window.addEventListener("load", () => {
   let touchStartX = 0;
   let touchEndX = 0;
 
-  // Add touch event listeners to the slider
   slider.addEventListener("touchstart", (event) => {
     touchStartX = event.touches[0].clientX;
   });
@@ -61,31 +56,25 @@ window.addEventListener("load", () => {
   });
 
   slider.addEventListener("touchend", (event) => {
+    handleTouchEnd();
+  });
+
+  function handleTouchEnd() {
     if (touchEndX < touchStartX) {
-      // Swipe left
       currentSlide++;
       if (currentSlide >= slides.length) {
         currentSlide = 0;
       }
     } else if (touchEndX > touchStartX) {
-      // Swipe right
       currentSlide--;
       if (currentSlide < 0) {
         currentSlide = slides.length - 1;
       }
     }
-
-    // Update the slider position
     setSlide();
-
-    // Reset touch start and end positions
     touchStartX = 0;
     touchEndX = 0;
-
-    // Reset and start the progress bar
-    resetProgressBar();
-    startProgressBar();
-  });
+  }
 
   function setSlide() {
     slider.style.transform = `translateX(${-currentSlide * 100}%)`;
@@ -107,8 +96,6 @@ window.addEventListener("load", () => {
       currentSlide = 0;
     }
     setSlide();
-    resetProgressBar();
-    startProgressBar();
   }
 
   function prevSlide() {
@@ -117,57 +104,28 @@ window.addEventListener("load", () => {
       currentSlide = slides.length - 1;
     }
     setSlide();
-    resetProgressBar();
-    startProgressBar();
   }
 
   createDots();
   setSlide();
-  startProgressBar();
 
   prevBtn.addEventListener("click", () => {
     clearInterval(interval);
     prevSlide();
     interval = setInterval(nextSlide, 5000);
-    resetProgressBar();
-    startProgressBar();
   });
 
   nextBtn.addEventListener("click", () => {
     clearInterval(interval);
     nextSlide();
     interval = setInterval(nextSlide, 5000);
-    resetProgressBar();
-    startProgressBar();
   });
-
-  function startProgressBar() {
-    progressBar.style.width = "100%";
-    progressBar.style.transition = "width 4.5s linear";
-  }
-
-  function resetProgressBar() {
-    progressBar.style.width = "0";
-    progressBar.style.transition = "none";
-  }
 
   slider.addEventListener("mouseover", () => {
     clearInterval(interval);
-    resetProgressBar();
   });
 
   slider.addEventListener("mouseleave", () => {
     interval = setInterval(nextSlide, 5000);
-    startProgressBar();
-  });
-
-  slider.addEventListener("transitionstart", () => {
-    progressBar.style.transition = "width 4.5s linear";
-    resetProgressBar();
-  });
-
-  slider.addEventListener("transitionend", () => {
-    progressBar.style.transition = "none";
-    startProgressBar();
   });
 });

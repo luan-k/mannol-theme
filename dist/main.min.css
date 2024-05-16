@@ -617,7 +617,7 @@ body {
   position: absolute;
 }
 .wkode-slider-dots .wkode-slider-dot {
-  background-color: white;
+  background-color: #e1e1e1;
   border-radius: 0;
   cursor: pointer;
   height: 0.5rem;
