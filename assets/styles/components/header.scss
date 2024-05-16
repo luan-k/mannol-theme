@@ -1,0 +1,32 @@
+.wk-header {
+  background-color: #1f2a44;
+  color: #fff;
+  font-family: "Helvetica", arial, serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  &-wrapper {
+    align-content: center;
+    align-items: center;
+    display: flex;
+    display: flex;
+    flex-direction: row;
+    gap: 6rem;
+    padding: 3rem 7rem;
+  }
+  & &__menu {
+    align-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+  & &__nav-list {
+    align-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 3rem;
+    text-transform: uppercase;
+  }
+}
