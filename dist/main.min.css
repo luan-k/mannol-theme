@@ -564,10 +564,11 @@ body {
 .wkode-slider-container {
   align-items: center;
   display: flex;
+  margin: auto;
   max-height: 80rem;
-  overflow: hidden;
+  overflow-x: clip;
   position: relative;
-  width: 100%;
+  width: 80%;
 }
 @media (max-width: 1080px) {
   .wkode-slider-container {
@@ -608,21 +609,20 @@ body {
   right: 2rem;
 }
 .wkode-slider-dots {
-  bottom: 3rem;
+  bottom: -2rem;
   display: flex;
   justify-content: center;
-  left: 50%;
+  left: 0;
   margin-top: 1rem;
   position: absolute;
-  transform: translateX(-50%);
 }
 .wkode-slider-dots .wkode-slider-dot {
   background-color: white;
-  border-radius: 50%;
+  border-radius: 0;
   cursor: pointer;
-  height: 1.5rem;
+  height: 0.5rem;
   margin-right: 1.5rem;
-  width: 1.5rem;
+  width: 13rem;
 }
 .wkode-slider-dots .wkode-slider-dot:last-of-type {
   margin-right: 0;
