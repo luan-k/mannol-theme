@@ -196,44 +196,17 @@ if ( function_exists( 'acf_register_block_type' ) ) {
 				return $block;
 			}
 
-			/* acf_register_block_type(
-				array(
-					'name'            => 'utilitary_contact_bar',
-					'title'           => __( 'Barra Utilitária de Contato' ),
-					'description'     => __( 'A custom phrase of the week block' ),
-					'render_template' => 'template-parts/blocks/posts/utilitary-bar.php',
-					'category'        => 'wkode',
-					'icon'            => 'format-status',
-					'keywords'        => array( 'barra utilitaria de contato' ),
-					'example'         => array(
-						'attributes' => array(
-							'mode' => 'preview',
-							'data' => array(
-								'preview' => WL_URL . '/template-parts/blocks/preview/post.png',
-							),
-						),
-					),
-				)
-			);
 			acf_register_block_type(
 				array(
-					'name'            => 'products_banner_carousel',
-					'title'           => __( 'Banner de produtos carousel' ),
-					'description'     => __( 'Um Banner com produtos em um carousel' ),
-					'render_template' => 'template-parts/blocks/posts/products_banner_carousel.php',
+					'name'            => 'wk-banner-grid',
+					'title'           => __( 'Banner Grid' ),
+					'description'     => __( 'A custom phrase of the week block' ),
+					'render_template' => 'template-parts/blocks/posts/wk-banner-grid.php',
 					'category'        => 'wkode',
 					'icon'            => 'format-status',
-					'keywords'        => array( 'slider' ),
-					'example'         => array(
-						'attributes' => array(
-							'mode' => 'preview',
-							'data' => array(
-								'preview' => WL_URL . '/template-parts/blocks/preview/post.png',
-							),
-						),
-					),
+					'keywords'        => array( 'grid', 'banner', 'home', 'hero' ),
 				)
-			); */
+			);
 		}
 	);
 }
