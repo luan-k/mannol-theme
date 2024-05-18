@@ -1,7 +1,5 @@
 const path = require("path");
 
-const defaultConfig = require("@wordpress/scripts/config/webpack.config");
-
 // css extraction and minification
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
@@ -12,8 +10,6 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 
 module.exports = [
   {
-    ...defaultConfig,
-    mode: "development",
     entry: {
       //main: ["./js/src/main.js", "./css/src/main.scss"],
       main: "./assets/scripts/main.js",
@@ -22,6 +18,8 @@ module.exports = [
       filename: "./dist/[name].min.js",
       //filename: "./dist/[name].min.[fullhash].js",
       path: path.resolve(__dirname),
+      assetModuleFilename: "img/[name][ext]",
+      publicPath: "/wp-content/themes/WKode-theme-pvm/",
     },
     module: {
       rules: [
@@ -31,18 +29,13 @@ module.exports = [
           exclude: /node_modules/,
           loader: "babel-loader",
         },
-        {
-          test: /\.tsx?$/,
-          exclude: /node_modules/,
-          use: "ts-loader",
-        },
 
         {
           test: /\.(s[ac]|c)ss$/i,
           use: [
             {
               loader: MiniCssExtractPlugin.loader,
-              options: { publicPath: "" },
+              options: { publicPath: "../" },
             },
 
             "css-loader",
@@ -65,16 +58,13 @@ module.exports = [
         },
         // loader for images and icons (only required if css references image files)
         {
-          test: /\.(png|jpg|gif)$/,
+          test: /\.(png|jpg|gif|svg)$/,
           type: "asset/resource",
           generator: {
-            filename: "./css/build/img/[name][ext]",
+            filename: "./dist/img/[name][ext]",
           },
         },
       ],
-    },
-    resolve: {
-      extensions: [".tsx", ".ts", ".js"],
     },
     plugins: [
       // clear out build directories on each build

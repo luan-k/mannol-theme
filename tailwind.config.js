@@ -5,24 +5,35 @@ module.exports = {
     "./inc/**/*.php",
     "./templates/**/*.php",
     "./safelist.txt",
-    //'./**/*.php', // recursive search for *.php (be aware on every file change it will go even through /node_modules which can be slow, read doc)
+    "./**/*.php", // recursive search for *.php (be aware on every file change it will go even through /node_modules which can be slow, read doc)
   ],
-  purge: false, // ["./**/*.html", "./**/*.js", "./**/*.php"],
   darkMode: "media", // or 'media' or 'class'
   theme: {
     extend: {
       colors: {
-        /*  primary: "#002e65", */
-        /* light: {
-          primary: "#D0E5EC",
-        }, */
-        /*  primary: "#002e65", */
+        wk: {
+          primary: {
+            white: "#D6D6D6",
+            red: "#D72818",
+            lightblue: "#3a9fe9",
+            yellow: "#f3db1e",
+            blue: "#14151B",
+            gray: "#E7E7E7",
+            lightgray: "#616161",
+          },
+          secondary: {
+            blue: "#266a9c",
+            yellow: "#F1B806",
+          },
+        },
       },
       fontFamily: {
         '"poppins"': ["Poppins", "sans-serif"],
         "josefin-sans": ["Josefin Sans", "sans-serif"],
         montserrat: ["montserrat", "sans-serif"],
         "dancing-script": ["Dancing Script", "cursive"],
+        rubik: [`"Rubik"`, `"sans-serif"`],
+        rem: [`"REM"`, `"sans-serif"`],
       },
       screens: {
         "2xl": "1685px",
