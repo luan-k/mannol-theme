@@ -200,11 +200,22 @@ if ( function_exists( 'acf_register_block_type' ) ) {
 				array(
 					'name'            => 'wk-banner-grid',
 					'title'           => __( 'Banner Grid' ),
-					'description'     => __( 'A custom phrase of the week block' ),
+					'description'     => __( 'Bloco de banners em grid' ),
 					'render_template' => 'template-parts/blocks/posts/wk-banner-grid.php',
 					'category'        => 'wkode',
 					'icon'            => 'format-status',
 					'keywords'        => array( 'grid', 'banner', 'home', 'hero' ),
+				)
+			);
+			acf_register_block_type(
+				array(
+					'name'            => 'wk-video-block',
+					'title'           => __( 'Bloco de video' ),
+					'description'     => __( 'Bloco de video com youtube da mannol' ),
+					'render_template' => 'template-parts/blocks/posts/wk-video-block.php',
+					'category'        => 'wkode',
+					'icon'            => 'format-status',
+					'keywords'        => array( 'youtube', 'video', 'home', 'hero' ),
 				)
 			);
 		}
