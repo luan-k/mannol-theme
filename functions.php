@@ -1,6 +1,7 @@
 <?php
   /** Theme setup */
   require_once( 'inc/theme-setup.php' );
+  require_once( 'inc/custom-post-types.php' );
 
   function enqueue_wkode_scripts() {
     wp_enqueue_style('wkode_main_styles', get_stylesheet_uri());

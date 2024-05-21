@@ -527,17 +527,11 @@ video {
   padding-left: 0px;
   padding-right: 0px;
 }
-.pr-12{
-  padding-right: 3rem;
-}
-.pl-12{
-  padding-left: 3rem;
+.pl-24{
+  padding-left: 6rem;
 }
 .pr-24{
   padding-right: 6rem;
-}
-.pl-24{
-  padding-left: 6rem;
 }
 .text-3xl{
   font-size: 1.875rem;

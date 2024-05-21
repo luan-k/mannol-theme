@@ -56,21 +56,3 @@
         </div>
     </div>
 </section>
-<!-- 
-EQUIPE DE CORRIDA HAUPT
-e MANNOL
-PARCERIA
-
-MANNOL colaborou com sucesso com a equipe de corrida HRT durante 2022-2023
-temporada, que resultou em vitórias notáveis ​​usando óleos MANNOL. A cooperação tem
-precisão e confiabilidade demonstradas, resultando em resultados de alto pódio e inesquecíveis
-momentos na pista.
-
-Olhando para a temporada de 2024, continuamos a nossa cooperação oficial com a HRT Racing
-toam. Esperamos novas conquistas e triunfos, minando a força do nosso
-cooperação duradoura.
-
-Clique para ver mais de perto os destaques da temporada 2022-2023 com MANNOL e HRT.
-
-
- -->
