@@ -29,16 +29,16 @@
           ?>
           <ul class="wk-header__nav-list">
             <li class="wk-header__nav-item">
-              <a href="#" class="wk-header__nav-link">Início</a>
+              <a href="/" class="wk-header__nav-link">Início</a>
             </li>
             <li class="wk-header__nav-item">
-              <a href="#" class="wk-header__nav-link">Sobre Nós</a>
+              <a href="/sobre-nos" class="wk-header__nav-link">Sobre Nós</a>
             </li>
             <li class="wk-header__nav-item">
-              <a href="#" class="wk-header__nav-link">Produtos</a>
+              <a href="/produtos" class="wk-header__nav-link">Produtos</a>
             </li>
             <li class="wk-header__nav-item">
-              <a href="#" class="wk-header__nav-link">Contato</a>
+              <a href="/contato" class="wk-header__nav-link">Contato</a>
             </li>
             <!-- catalogo -->
           </ul>

@@ -8,19 +8,18 @@
     <?php
     $args = array(
       'post_type' => 'produtos',
-      'posts_per_page' => 3,
+      'posts_per_page' => -1,
     );
 
     $query = new WP_Query($args);
 
     if ($query->have_posts()) :
     ?>
-      <section class="produtos">
-        <div class="container">
-          <h2 class="text-center">Produtos</h2>
-          <div class="grid grid-cols-3 gap-4">
+      <section class="wk-produtos">
+        <div class="p-9">
+          <div class="grid grid-cols-3 gap-10">
             <?php while ($query->have_posts()) : $query->the_post(); ?>
-              <div class="produtos__item">
+              <div class="wk-produtos__item">
                 <a href="<?php the_permalink(); ?>">
                   <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>">
                   <h3><?php the_title(); ?></h3>

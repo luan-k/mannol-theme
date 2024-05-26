@@ -1,0 +1,31 @@
+.wk-produtos {
+  &__item {
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+    min-height: 330px;
+    padding: 25px;
+    a {
+      display: flex;
+      img {
+        height: auto;
+        width: 100%;
+      }
+      h3 {
+        font-family: Helvetica, sans-serif;
+        font-size: 3rem;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+// haha, note the difference in language, produtos and products.
+.single-wk-products {
+  &__trail {
+    background-color: #f2f4f6;
+    color: #182135;
+    font-size: 1.7rem;
+    padding: 1.5rem 0;
+  }
+}
