@@ -39,7 +39,7 @@
     ?>
       <section class="wk-produtos">
         <div class="p-9">
-          <div class="grid grid-cols-3 gap-10">
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
             <?php while ($query->have_posts()) : $query->the_post(); ?>
               <div class="wk-produtos__item">
                 <a href="<?php the_permalink(); ?>">

@@ -506,17 +506,17 @@ video {
 .h-auto{
   height: auto;
 }
-.w-1\/3{
-  width: 33.333333%;
+.w-full{
+  width: 100%;
 }
 .transform{
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
+.grid-cols-1{
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
 .grid-cols-2{
   grid-template-columns: repeat(2, minmax(0, 1fr));
-}
-.grid-cols-3{
-  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 .grid-cols-4{
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -527,11 +527,11 @@ video {
 .gap-4{
   gap: 1rem;
 }
-.gap-7{
-  gap: 1.75rem;
-}
 .gap-6{
   gap: 1.5rem;
+}
+.gap-7{
+  gap: 1.75rem;
 }
 .p-9{
   padding: 2.25rem;
@@ -654,15 +654,26 @@ h6 {
   font-size: 1.5rem;
 }
 
-/* font: 40px "Helvetica 75 Bold", arial, serif;
-line-height: normal;
-padding: 15px 0;
-letter-spacing: 0;
-text-transform: uppercase;
-line-height: 1.35;
-margin: 0;
-color: #182135;
- */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 4rem;
+  }
+  h2 {
+    font-size: 3.5rem;
+  }
+  h3 {
+    font-size: 3rem;
+  }
+  h4 {
+    font-size: 2.5rem;
+  }
+  h5 {
+    font-size: 2rem;
+  }
+  h6 {
+    font-size: 1.5rem;
+  }
+}
 .wkode-slider {
   display: flex;
   transition: transform 0.5s ease;
@@ -786,6 +797,11 @@ color: #182135;
   width: 100%;
 }
 
+@media (max-width: 768px) {
+  .wk-video-block iframe {
+    aspect-ratio: 6/9;
+  }
+}
 .wk-header {
   background-color: #1f2a44;
   color: #fff;
@@ -838,6 +854,11 @@ color: #182135;
   font-weight: bold;
 }
 
+@media (max-width: 768px) {
+  .wk-produtos__item a {
+    flex-direction: column;
+  }
+}
 .single-wk-products__trail {
   background-color: #f2f4f6;
   color: #182135;
@@ -881,9 +902,36 @@ color: #182135;
   font-size: 2.2rem;
   font-weight: bold;
   padding: 2rem;
-  transition: all 0.3s;
   text-transform: uppercase;
+  transition: all 0.3s;
 }
 .wk-categories__item:hover {
   color: #182135;
+}
+
+@media (max-width: 768px) {
+  .wk-categories__item {
+    text-align: center;
+  }
+}
+
+@media (min-width: 768px){
+  .md\:w-1\/3{
+    width: 33.333333%;
+  }
+  .md\:grid-cols-3{
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+  .md\:grid-cols-4{
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+  .md\:grid-cols-2{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .md\:pr-24{
+    padding-right: 6rem;
+  }
+  .md\:pl-24{
+    padding-left: 6rem;
+  }
 }

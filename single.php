@@ -71,7 +71,7 @@ wp_reset_postdata();
     </div>
     <div class="single-wk-products__image py-12">
        <div class="container">
-            <img class="m-auto w-1/3 h-auto" src="<?php echo $post_thumbnail; ?>" alt="<?php echo $title; ?>">
+            <img class="m-auto w-full md:w-1/3 h-auto" src="<?php echo $post_thumbnail; ?>" alt="<?php echo $title; ?>">
        </div>
     </div>
     <div class="single-wk-products__text">
@@ -81,7 +81,7 @@ wp_reset_postdata();
     </div>
      <div class="single-wk-products__related py-12">
         <h2 class="text-center">Produtos Relacionados</h2>
-        <div class="container grid grid-cols-4 gap-10 py-12">
+        <div class="container grid grid-cols-1 md:grid-cols-4 gap-10 py-12">
             <?php if ($related_posts->have_posts()) : ?>
                 <?php while ($related_posts->have_posts()) : $related_posts->the_post(); ?>
                     <div class="single-wk-products__related-item">

@@ -19,6 +19,15 @@
     }
   }
 }
+@media (max-width: 768px) {
+  .wk-produtos {
+    &__item {
+      a {
+        flex-direction: column;
+      }
+    }
+  }
+}
 
 // haha, note the difference in language, produtos and products.
 .single-wk-products {
@@ -68,10 +77,17 @@
     font-size: 2.2rem;
     font-weight: bold;
     padding: 2rem;
-    transition: all 0.3s;
     text-transform: uppercase;
+    transition: all 0.3s;
     &:hover {
       color: #182135;
+    }
+  }
+}
+@media (max-width: 768px) {
+  .wk-categories {
+    &__item {
+      text-align: center;
     }
   }
 }
