@@ -5,7 +5,29 @@
       <img src="<?php echo get_theme_file_uri('assets/img/mannol-index.jpg'); ?> " alt="">
     </section>
 
-    <?php
+    
+     <?php
+    // Get all categories
+    $categories = get_categories(array(
+      'exclude' => array(1),
+    ));
+
+    // Check if there are any categories
+    if ($categories) :
+    ?>
+      <section class="wk-categories">
+        <div class="p-9">
+          <div class="wk-categories__wrapper gap-6">
+            <?php foreach ($categories as $category) : ?>
+              <div class="wk-categories__item">
+                  <?php echo $category->name; ?>
+              </div>
+            <?php endforeach; ?>
+          </div>
+        </div>
+      </section>
+    <?php endif;
+
     $args = array(
       'post_type' => 'produtos',
       'posts_per_page' => -1,

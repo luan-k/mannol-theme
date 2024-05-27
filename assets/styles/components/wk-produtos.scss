@@ -54,3 +54,24 @@
     }
   }
 }
+
+.wk-categories {
+  &__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  &__item {
+    color: #b0b7c4;
+    cursor: pointer;
+    font-family: "Helvetica", sans-serif;
+    font-size: 2.2rem;
+    font-weight: bold;
+    padding: 2rem;
+    transition: all 0.3s;
+    text-transform: uppercase;
+    &:hover {
+      color: #182135;
+    }
+  }
+}
