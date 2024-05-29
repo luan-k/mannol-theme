@@ -497,6 +497,9 @@ video {
 .m-auto{
   margin: auto;
 }
+.mb-28{
+  margin-bottom: 7rem;
+}
 .mt-12{
   margin-top: 3rem;
 }
@@ -544,12 +547,32 @@ video {
   padding-top: 3rem;
   padding-bottom: 3rem;
 }
+.py-60{
+  padding-top: 15rem;
+  padding-bottom: 15rem;
+}
+.text-left{
+  text-align: left;
+}
 .text-center{
   text-align: center;
+}
+.font-poppins{
+  font-family: Poppins, sans-serif;
 }
 .text-3xl{
   font-size: 1.875rem;
   line-height: 2.25rem;
+}
+.text-6xl{
+  font-size: 3.75rem;
+  line-height: 1;
+}
+.font-extrabold{
+  font-weight: 800;
+}
+.uppercase{
+  text-transform: uppercase;
 }
 .text-\[\#fcc817\]{
   --tw-text-opacity: 1;
@@ -908,7 +931,185 @@ h6 {
     text-align: center;
   }
 }
-
+.wkode-contact-block {
+  color: rgb(50, 50, 50);
+  font-family: "Helvetica", sans-serif;
+}
+.wkode-contact-block__wrapper{
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 1rem;
+  padding-left: 1rem;
+}
+@media (min-width: 640px){
+  .wkode-contact-block__wrapper{
+    max-width: 640px;
+    padding-right: 2rem;
+    padding-left: 2rem;
+  }
+}
+@media (min-width: 768px){
+  .wkode-contact-block__wrapper{
+    max-width: 768px;
+  }
+}
+@media (min-width: 1024px){
+  .wkode-contact-block__wrapper{
+    max-width: 1024px;
+    padding-right: 7%;
+    padding-left: 7%;
+  }
+}
+@media (min-width: 1280px){
+  .wkode-contact-block__wrapper{
+    max-width: 1280px;
+    padding-right: 8%;
+    padding-left: 8%;
+  }
+}
+@media (min-width: 1685px){
+  .wkode-contact-block__wrapper{
+    max-width: 1685px;
+    padding-right: 10%;
+    padding-left: 10%;
+  }
+}
+.wkode-contact-block__wrapper{
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+@media (min-width: 768px){
+  .wkode-contact-block__wrapper{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+.wkode-contact-block__title {
+  font-family: "Helvetica", sans-serif;
+  font-size: 2.6rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.6;
+  margin-bottom: 3rem;
+}
+.wkode-contact-block__subtitle {
+  font-size: 2rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  margin-bottom: 1rem;
+}
+.wkode-contact-block__text {
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.wkode-contact-block__form {
+  opacity: 1;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  transition: all 0.3s;
+  z-index: 89;
+}
+.wkode-contact-block__form .wpforms-container form .wpforms-field-container input,
+.wkode-contact-block__form .wpforms-container form .wpforms-field-container textarea {
+  background-color: transparent !important;
+  border: 1.8px solid rgb(50, 50, 50) 0 !important;
+  border-radius: 1px !important;
+  color: rgb(50, 50, 50) !important;
+  font-family: "Helvetica" !important;
+  font-size: 1.4rem !important;
+  font-weight: 300 !important;
+  margin-bottom: 1rem;
+  min-width: 100% !important;
+  text-transform: capitalize !important;
+}
+.wkode-contact-block__form .wpforms-container form .wpforms-field-container input::-moz-placeholder, .wkode-contact-block__form .wpforms-container form .wpforms-field-container textarea::-moz-placeholder {
+  color: rgb(50, 50, 50) !important;
+  font-family: "Helvetica" !important;
+  font-size: 1.4rem !important;
+  font-weight: 300 !important;
+  min-width: 100% !important;
+  text-transform: capitalize !important;
+}
+.wkode-contact-block__form .wpforms-container form .wpforms-field-container input::placeholder,
+.wkode-contact-block__form .wpforms-container form .wpforms-field-container textarea::placeholder {
+  color: rgb(50, 50, 50) !important;
+  font-family: "Helvetica" !important;
+  font-size: 1.4rem !important;
+  font-weight: 300 !important;
+  min-width: 100% !important;
+  text-transform: capitalize !important;
+}
+.wkode-contact-block__form .wpforms-container form .wpforms-field-container .wpforms-field {
+  padding: 5px 0 !important;
+}
+.wkode-contact-block__form .wpforms-container form .wpforms-field-container .wpforms-field.wpforms-field-number, .wkode-contact-block__form .wpforms-container form .wpforms-field-container .wpforms-field.wpforms-field-phone {
+  display: inline-block;
+  width: 100%;
+}
+.wkode-contact-block__form .wpforms-container form .wpforms-field-container .wpforms-field.wpforms-field-number {
+  margin-right: 2%;
+}
+.wkode-contact-block__form .wpforms-container form .wpforms-field-container textarea.wpforms-field-medium.wpforms-field-required {
+  border-radius: 1px !important;
+  height: 70px;
+  margin-bottom: 1.5rem;
+}
+.wkode-contact-block__form .wpforms-container form .wpforms-field-container .wpforms-field.wpforms-field-checkbox {
+  font-size: 1.2rem !important;
+}
+.wkode-contact-block__form .wpforms-container form .wpforms-field-container .wpforms-field.wpforms-field-checkbox label {
+  font-size: 1.2rem !important;
+}
+.wkode-contact-block__form .wpforms-container form .wpforms-field-container .wpforms-field.wpforms-field-checkbox li.choice-1 {
+  align-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.wkode-contact-block__form .wpforms-container form .wpforms-field-container .wpforms-field.wpforms-field-checkbox input {
+  min-width: auto !important;
+}
+.wkode-contact-block__form .wpforms-container form .wpforms-field-container .wpforms-field.wpforms-field-checkbox label,
+.wkode-contact-block__form .wpforms-container form .wpforms-field-container .wpforms-field.wpforms-field-checkbox ul,
+.wkode-contact-block__form .wpforms-container form .wpforms-field-container .wpforms-field.wpforms-field-checkbox li {
+  display: inline !important;
+}
+.wkode-contact-block__form .wpforms-container form .wpforms-field-container .wpforms-field.wpforms-field-checkbox label {
+  margin-right: 7px;
+}
+.wkode-contact-block__form .wpforms-submit-container button {
+  background-color: rgb(31 42 68/var(--tw-bg-opacity)) !important;
+  border-color: rgb(31 42 68/var(--tw-border-opacity)) !important;
+  border-radius: 1px !important;
+  border-width: 4px !important;
+  color: rgb(255 255 255/var(--tw-text-opacity)) !important;
+  font-family: Rubik, sans-serif !important;
+  font-size: 1.5rem !important;
+  font-weight: 700 !important;
+  line-height: 2rem !important;
+  margin-top: 3rem !important;
+  overflow: hidden !important;
+  padding-bottom: 1rem !important;
+  padding-left: 8rem !important;
+  padding-right: 8rem !important;
+  padding-top: 1rem !important;
+  position: relative !important;
+  text-transform: uppercase !important;
+  transition: all 0.3s !important;
+  width: 100% !important;
+  --tw-border-opacity: 1 !important;
+  --tw-bg-opacity: 1 !important;
+  --tw-text-opacity: 1 !important;
+}
+.wkode-contact-block__form .wpforms-submit-container button:hover {
+  background-color: transparent !important;
+  color: rgb(31 42 68/var(--tw-text-opacity)) !important;
+  --tw-text-opacity: 1 !important;
+}
 @media (min-width: 768px){
   .md\:w-1\/3{
     width: 33.333333%;
