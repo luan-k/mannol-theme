@@ -825,6 +825,9 @@ h6 {
   font-family: "Helvetica", arial, serif;
   font-size: 1.8rem;
   font-weight: 700;
+  position: sticky;
+  top: 0;
+  z-index: 9999;
 }
 .wk-header-wrapper {
   align-content: center;
@@ -832,7 +835,7 @@ h6 {
   display: flex;
   flex-direction: row;
   gap: 6rem;
-  padding: 3rem 7rem;
+  padding: 0 7rem;
 }
 .wk-header .wk-header__menu {
   align-content: center;
@@ -849,6 +852,14 @@ h6 {
   flex-direction: row;
   gap: 3rem;
   text-transform: uppercase;
+}
+.wk-header .wk-header__nav-item {
+  border-bottom: 3px solid transparent;
+  padding: 3rem 0;
+  transition: all 0.3s;
+}
+.wk-header .wk-header__nav-item:hover {
+  border-bottom: 3px solid #fff;
 }
 
 .wk-produtos__item {

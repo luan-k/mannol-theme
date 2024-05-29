@@ -4,14 +4,16 @@
   font-family: "Helvetica", arial, serif;
   font-size: 1.8rem;
   font-weight: 700;
+  position: sticky;
+  top: 0;
+  z-index: 9999;
   &-wrapper {
     align-content: center;
     align-items: center;
     display: flex;
-    display: flex;
     flex-direction: row;
     gap: 6rem;
-    padding: 3rem 7rem;
+    padding: 0 7rem;
   }
   & &__menu {
     align-content: center;
@@ -28,5 +30,13 @@
     flex-direction: row;
     gap: 3rem;
     text-transform: uppercase;
+  }
+  & &__nav-item {
+    border-bottom: 3px solid transparent;
+    padding: 3rem 0;
+    transition: all 0.3s;
+    &:hover {
+      border-bottom: 3px solid #fff;
+    }
   }
 }
