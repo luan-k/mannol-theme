@@ -1,3 +1,7 @@
+<?php
+get_header();
+?>
+
 <section class="wk-banner-block mt-12">
     <div class="container">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -56,3 +60,6 @@
         </div>
     </div>
 </section>
+
+<?php
+get_footer();
