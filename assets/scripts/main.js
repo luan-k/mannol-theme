@@ -1,5 +1,6 @@
 import "../styles/main.scss";
 import "./blocks/slider";
+import "./components/header";
 
 /* import { DisplayLabel } from "./components/counter";
 

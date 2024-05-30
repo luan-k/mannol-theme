@@ -867,7 +867,117 @@ h6 {
 .wk-header .wk-header__nav-item:hover {
   border-bottom: 3px solid #fff;
 }
+.wk-header .wk-header__button {
+  display: none;
+}
 
+@media (max-width: 1000px) {
+  .wk-header {
+    padding: 3rem 0;
+  }
+  .wk-header .wk-header__menu {
+    justify-content: end;
+  }
+  .wk-header .wk-header__nav-list {
+    flex-direction: column;
+  }
+  .wk-header__nav {
+    background-color: #1f2a44;
+    border-radius: 0 0 1rem 1rem;
+    left: 50%;
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 2rem;
+    position: absolute;
+    top: 8rem;
+    transform: translateX(-50%);
+    transition: all 0.3s;
+    width: 100%;
+  }
+  .wk-header__nav.active {
+    max-height: 100vh;
+    padding: 2rem;
+  }
+  .wk-header .wk-header__button {
+    display: block;
+  }
+  .wk-header .wk-header__button svg {
+    fill: white;
+    width: 2rem;
+  }
+  .wk-header .wk-header__button--closed {
+    display: block;
+  }
+  .wk-header .wk-header__button--open {
+    display: none;
+  }
+  .wk-header .wk-header__button.active .wk-header__button--closed {
+    display: none;
+  }
+  .wk-header .wk-header__button.active .wk-header__button--open {
+    display: block;
+  }
+}
+/* @media (max-width: 1000px) {
+  .softdesign-header {
+    &__wrapper {
+      position: relative;
+    }
+
+    &__logo {
+      img {
+        width: 12rem;
+      }
+    }
+    &__nav {
+      background-color: white;
+      border-radius: 1rem;
+      left: 50%;
+      max-height: 0;
+      overflow: hidden;
+      padding: 0 2rem;
+      position: absolute;
+      top: 4rem;
+      transform: translateX(-50%);
+      transition: all 0.3s;
+      width: 90%;
+      &.active {
+        max-height: 100vh;
+        padding: 2rem;
+      }
+    }
+    &__menu {
+      color: rgb(46, 46, 46);
+      flex-direction: column;
+      li a {
+      }
+
+      &__item {
+      }
+    }
+    &__button {
+      display: block;
+      svg {
+        fill: white;
+        width: 2rem;
+      }
+      &--closed {
+        display: block;
+      }
+      &--open {
+        display: none;
+      }
+      &.active {
+        .softdesign-header__button--closed {
+          display: none;
+        }
+        .softdesign-header__button--open {
+          display: block;
+        }
+      }
+    }
+  }
+} */
 .wk-produtos__item {
   background-color: #fff;
   border-radius: 20px;

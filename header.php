@@ -43,6 +43,18 @@
             <!-- catalogo -->
           </ul>
         </nav>
-        <div class="search">search</div>
+        <!-- <div class="search">search</div> -->
+        <div class="wk-header__button">
+          <span class="wk-header__button--closed">
+            <?php
+            echo file_get_contents(get_theme_file_path('/assets/svg/hamburguer.svg'));
+            ?>
+          </span>
+          <span class="wk-header__button--open">
+            <?php
+            echo file_get_contents(get_theme_file_path('/assets/svg/x.svg'));
+            ?>
+          </span>
+        </div>
     </div>
   </header>
