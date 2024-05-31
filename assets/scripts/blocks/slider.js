@@ -1,4 +1,8 @@
 window.addEventListener("load", () => {
+  const isThereSlider = document.querySelector("#wkode-slider-container");
+  if (!isThereSlider) {
+    return;
+  }
   const ThereIsMobile = document.querySelector(".there-is-mobile");
   const sliderContainer = document.getElementById("wkode-slider-container");
   const sliderContainerMobile = document.getElementById(

@@ -9,6 +9,10 @@
     wp_enqueue_script('main-js', get_theme_file_uri('/dist/main.min.js'), NULL, '1.0', true);
     wp_enqueue_script('wkode-font_awesome', '//kit.fontawesome.com/fde7c29e46.js', NULL, '1.0', true);
     wp_enqueue_script('blocks', get_theme_file_uri('/build/index.js'), NULL, '1.0', true);
+
+    wp_localize_script('main-js', 'my_ajax_object', array(
+        'ajax_url' => admin_url('admin-ajax.php')
+    ));
   }
   add_action( 'wp_enqueue_scripts', 'enqueue_wkode_scripts' );
 
@@ -107,4 +111,44 @@ class CustomSliderBlock {
 
 $customSliderBlock = new CustomSliderBlock();
 
+// Add AJAX action for logged-in and non-logged-in users
+add_action('wp_ajax_filter_products', 'filter_products');
+add_action('wp_ajax_nopriv_filter_products', 'filter_products');
+
+function filter_products() {
+    // Get the category slug from the AJAX request
+    $category_slug = $_POST['category'];
+
+    $args = array(
+        'post_type' => 'produtos',
+        'posts_per_page' => -1,
+        'tax_query' => array(
+            array(
+                'taxonomy' => 'category',
+                'field' => 'slug',
+                'terms' => $category_slug,
+            ),
+        ),
+    );
+
+    $query = new WP_Query($args);
+
+    if ($query->have_posts()) :
+        while ($query->have_posts()) : $query->the_post(); ?>
+            <div class="wk-produtos__item">
+                <a href="<?php the_permalink(); ?>">
+                    <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="<?php the_title(); ?>">
+                    <h3><?php the_title(); ?></h3>
+                </a>
+            </div>
+        <?php endwhile;
+    else :
+        echo '<p>No products found</p>';
+    endif;
+
+    wp_die();
+}
+
+
 ?>
+
