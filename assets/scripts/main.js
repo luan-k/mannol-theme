@@ -13,6 +13,12 @@ if (isThisArchive) {
       e.preventDefault();
       let categorySlug = category.id;
 
+      // Remove active class from all categories
+      categories.forEach((cat) => cat.classList.remove("active"));
+      // Add active class to the clicked category
+      category.classList.add("active");
+
+      // If 'todas' is clicked, reset to show all products
       fetch(my_ajax_object.ajax_url, {
         method: "POST",
         headers: {
@@ -20,7 +26,7 @@ if (isThisArchive) {
         },
         body: new URLSearchParams({
           action: "filter_products",
-          category: categorySlug,
+          category: categorySlug === "todas" ? "" : categorySlug,
         }),
       })
         .then((response) => response.text())

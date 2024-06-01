@@ -12,11 +12,13 @@
 
     // Check if there are any categories
     if ($categories) :
-        //var_dump($categories);
     ?>
         <section class="wk-categories">
             <div class="p-9">
                 <div class="wk-categories__wrapper gap-6">
+                    <div class="wk-categories__item active" id="todas">
+                        Todas
+                    </div>
                     <?php foreach ($categories as $category) : ?>
                         <div class="wk-categories__item" id="<?= $category->slug ?>">
                             <?php echo $category->name; ?>

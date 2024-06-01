@@ -122,14 +122,17 @@ function filter_products() {
     $args = array(
         'post_type' => 'produtos',
         'posts_per_page' => -1,
-        'tax_query' => array(
+    );
+
+    if ($category_slug) {
+        $args['tax_query'] = array(
             array(
                 'taxonomy' => 'category',
                 'field' => 'slug',
                 'terms' => $category_slug,
             ),
-        ),
-    );
+        );
+    }
 
     $query = new WP_Query($args);
 
@@ -148,6 +151,7 @@ function filter_products() {
 
     wp_die();
 }
+
 
 
 ?>

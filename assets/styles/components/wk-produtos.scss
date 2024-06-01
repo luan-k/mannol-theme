@@ -79,6 +79,9 @@
     padding: 2rem;
     text-transform: uppercase;
     transition: all 0.3s;
+    &.active {
+      color: #182135;
+    }
     &:hover {
       color: #182135;
     }
