@@ -1,9 +1,10 @@
 .wk-footer {
   background-color: #1f2a44;
-  color: #fff;
+  color: #a8aab1;
   font-family: "Helvetica", arial, serif;
   margin-top: 6rem;
-  padding: 6rem 0;
+  padding: 9rem 0;
+  position: relative;
   &__title {
     color: inherit;
     font-size: 3rem;
@@ -16,16 +17,36 @@
       margin-bottom: 0.5rem;
     }
   }
+  .wk-header__nav-item {
+    transition: all 0.3s;
+    &:hover {
+      color: #fff;
+    }
+  }
   &__icons {
+    gap: 3rem;
+    justify-content: center;
     margin-bottom: 2.1rem;
     svg {
-      fill: #fff;
+      fill: #a8aab1;
       height: 2.5rem;
       margin-right: 1rem;
       width: 2.5rem;
       path {
-        fill: #fff;
+        fill: #a8aab1;
       }
     }
+  }
+  &__ruler {
+    border-color: #a8aab1;
+  }
+  &__copy {
+    background-color: #182135;
+    bottom: 0;
+    font-size: 1.8rem;
+    padding: 2.1rem 0;
+    position: absolute;
+    text-transform: uppercase;
+    width: 100%;
   }
 }
