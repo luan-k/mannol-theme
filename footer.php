@@ -64,6 +64,13 @@
           <div class="wk-footer__copy">
             <div class="container text-center">
               <p>&copy; 2024 - Grupo Pecmotors</p>
+              <div class="wkode-logo">
+                <a target="_blank" href="https://wkode.com.br/">
+                  <?php
+                  echo file_get_contents(get_theme_file_path('/assets/svg/wkode-logo-footer.svg'));
+                  ?>
+                </a>
+              </div>
             </div>
           </div>
         </footer>

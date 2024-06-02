@@ -49,4 +49,35 @@
     text-transform: uppercase;
     width: 100%;
   }
+  .wkode-logo {
+    padding: 1.5rem 0;
+    position: absolute;
+    right: 3rem;
+    top: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .wk-footer {
+    padding-bottom: 15rem;
+    .wk-header__nav-item {
+    }
+    &__title {
+    }
+    &__column {
+    }
+    &__icons {
+      svg {
+      }
+    }
+    &__copy {
+    }
+    .wkode-logo {
+      position: relative;
+      right: auto;
+      svg {
+        margin: auto;
+      }
+    }
+  }
 }
