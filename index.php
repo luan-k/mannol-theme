@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <main id="main" class="product-archive">
     <section class="index-image">
-        <img src="<?php echo get_theme_file_uri('assets/img/mannol-index.jpg'); ?>" alt="">
+        <img class="w-full" src="<?php echo get_theme_file_uri('assets/img/mannol-index.jpg'); ?>" alt="">
     </section>
 
     <?php
