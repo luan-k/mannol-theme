@@ -1,3 +1,4 @@
+import "./base/scroll-entrance";
 import "../styles/main.scss";
 import "./blocks/slider";
 import "./components/header";

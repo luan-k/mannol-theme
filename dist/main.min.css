@@ -701,6 +701,58 @@ h6 {
     font-size: 1.5rem;
   }
 }
+/*This is the initial state before animating */
+[data-entrance=from-top-left] {
+  opacity: 0.3;
+  transform: translate(-15rem, -15rem);
+}
+
+/*This is the state after animating */
+[data-entrance=from-top-left].has-animated {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+[data-entrance=from-bottom-left] {
+  opacity: 0.3;
+  transform: translate(-15rem, 15rem);
+}
+
+[data-entrance=from-bottom-left].has-animated {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+[data-entrance=from-top-right] {
+  opacity: 0.3;
+  transform: translate(15rem, -15rem);
+}
+
+[data-entrance=from-top-right].has-animated {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+[data-entrance=from-bottom-right] {
+  opacity: 0.3;
+  transform: translate(15rem, 15rem);
+}
+
+[data-entrance=from-bottom-right].has-animated {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+[data-entrance=grow] {
+  opacity: 0.3;
+  transform: scale(25%);
+}
+
+[data-entrance=grow].has-animated {
+  opacity: 1;
+  transform: scale(100%);
+}
+
 .wkode-slider {
   display: flex;
   transition: transform 0.5s ease;
@@ -809,7 +861,6 @@ h6 {
   margin-top: 7rem;
 }
 .wk-banner-grid__single img {
-  max-height: 19rem;
   -o-object-fit: cover;
      object-fit: cover;
   width: 100%;
