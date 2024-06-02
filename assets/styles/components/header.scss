@@ -42,6 +42,32 @@
   & &__button {
     display: none;
   }
+  & &__search {
+    align-items: center;
+    display: flex;
+    gap: 2rem;
+    position: relative;
+    &-results {
+      background: white;
+      color: black;
+      flex-direction: column;
+      font-size: 1.5rem;
+      font-weight: normal;
+      gap: 2.1rem;
+      padding: 1rem 1.5rem;
+      position: absolute;
+      top: 5rem;
+      width: 100%;
+    }
+    &-input {
+      background-color: transparent;
+      border-bottom: 1px solid white;
+      padding: 0.5rem 1rem;
+      &:focus-visible {
+        outline: none;
+      }
+    }
+  }
 }
 
 @media (max-width: 1000px) {
@@ -96,6 +122,9 @@
           display: block;
         }
       }
+    }
+    & &__search {
+      display: none;
     }
   }
 }

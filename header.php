@@ -43,7 +43,13 @@
             <!-- catalogo -->
           </ul>
         </nav>
-        <!-- <div class="search">search</div> -->
+        <div class="wk-header__search">
+          <div class="wk-header__search-icon">
+              <?php echo file_get_contents(get_theme_file_path('/assets/svg/search.svg')); ?>
+          </div>
+          <input type="text" class="wk-header__search-input" style="display: none;">
+          <div class="wk-header__search-results" style="display: none;"></div>
+        </div>
         <div class="wk-header__button">
           <span class="wk-header__button--closed">
             <?php

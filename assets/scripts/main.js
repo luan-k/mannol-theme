@@ -38,6 +38,58 @@ if (isThisArchive) {
   });
 }
 
+document.addEventListener("DOMContentLoaded", function () {
+  const searchIcon = document.querySelector(".wk-header__search-icon");
+  const searchInput = document.querySelector(".wk-header__search-input");
+  const searchResults = document.querySelector(".wk-header__search-results");
+
+  searchIcon.addEventListener("click", () => {
+    if (searchInput.style.display === "none") {
+      searchInput.style.display = "block";
+      searchInput.focus();
+    } else {
+      searchInput.style.display = "none";
+      searchResults.style.display = "none";
+    }
+  });
+
+  searchInput.addEventListener("input", () => {
+    const query = searchInput.value;
+
+    if (query.length < 2) {
+      searchResults.style.display = "none";
+      return;
+    }
+
+    fetch(my_ajax_object.ajax_url, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
+      },
+      body: new URLSearchParams({
+        action: "search_products",
+        query: query,
+      }),
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        searchResults.innerHTML = "";
+        if (data.length > 0) {
+          searchResults.style.display = "flex";
+          data.forEach((item) => {
+            const resultItem = document.createElement("div");
+            resultItem.classList.add("search-result-item");
+            resultItem.innerHTML = `<a href="${item.link}">${item.title}</a>`;
+            searchResults.appendChild(resultItem);
+          });
+        } else {
+          searchResults.style.display = "none";
+        }
+      })
+      .catch((error) => console.log("Error:", error));
+  });
+});
+
 /* import { DisplayLabel } from "./components/counter";
 
 let Main = {

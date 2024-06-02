@@ -152,6 +152,34 @@ function filter_products() {
     wp_die();
 }
 
+function search_products() {
+    $query = sanitize_text_field($_POST['query']);
+
+    $args = array(
+        'post_type' => 'produtos',
+        'posts_per_page' => 10,
+        's' => $query,
+    );
+
+    $query = new WP_Query($args);
+
+    $results = array();
+
+    if ($query->have_posts()) {
+        while ($query->have_posts()) {
+            $query->the_post();
+            $results[] = array(
+                'title' => get_the_title(),
+                'link' => get_permalink(),
+            );
+        }
+    }
+
+    wp_send_json($results);
+}
+
+add_action('wp_ajax_search_products', 'search_products');
+add_action('wp_ajax_nopriv_search_products', 'search_products');
 
 
 ?>
