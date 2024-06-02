@@ -3,41 +3,60 @@ import "../styles/main.scss";
 import "./blocks/slider";
 import "./components/header";
 
-const isThisArchive = document.querySelector(".product-archive");
+document.addEventListener("DOMContentLoaded", function () {
+  const isThisArchive = document.querySelector(".product-archive");
 
-if (isThisArchive) {
-  let categories = document.querySelectorAll(".wk-categories__item");
-  let productList = document.getElementById("product-list");
+  if (isThisArchive) {
+    let categories = document.querySelectorAll(".wk-categories__item");
+    let productList = document.getElementById("product-list");
 
-  categories.forEach((category) => {
-    category.addEventListener("click", (e) => {
-      e.preventDefault();
-      let categorySlug = category.id;
-
-      // Remove active class from all categories
+    // Function to toggle active class
+    function toggleActiveClass(category) {
       categories.forEach((cat) => cat.classList.remove("active"));
-      // Add active class to the clicked category
       category.classList.add("active");
+    }
 
-      // If 'todas' is clicked, reset to show all products
-      fetch(my_ajax_object.ajax_url, {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
-        },
-        body: new URLSearchParams({
-          action: "filter_products",
-          category: categorySlug === "todas" ? "" : categorySlug,
-        }),
-      })
-        .then((response) => response.text())
-        .then((data) => {
-          productList.innerHTML = data;
+    categories.forEach((category) => {
+      category.addEventListener("click", (e) => {
+        e.preventDefault();
+        let categorySlug = category.getAttribute("data-category");
+
+        // Toggle active class
+        toggleActiveClass(category);
+
+        fetch(my_ajax_object.ajax_url, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
+          },
+          body: new URLSearchParams({
+            action: "filter_products",
+            category: categorySlug,
+          }),
         })
-        .catch((error) => console.log("Error:", error));
+          .then((response) => response.text())
+          .then((data) => {
+            productList.innerHTML = data;
+          })
+          .catch((error) => console.log("Error:", error));
+      });
     });
-  });
-}
+
+    // If there's a category in the URL, simulate a click
+    const urlParams = new URLSearchParams(window.location.search);
+    const currentCategory = urlParams.get("category");
+
+    if (currentCategory) {
+      const categoryElement = document.querySelector(
+        `.wk-categories__item[data-category="${currentCategory}"]`
+      );
+      if (categoryElement) {
+        toggleActiveClass(categoryElement);
+        categoryElement.click();
+      }
+    }
+  }
+});
 
 document.addEventListener("DOMContentLoaded", function () {
   const searchIcon = document.querySelector(".wk-header__search-icon");

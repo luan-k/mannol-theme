@@ -181,6 +181,15 @@ function search_products() {
 add_action('wp_ajax_search_products', 'search_products');
 add_action('wp_ajax_nopriv_search_products', 'search_products');
 
+function custom_rewrite_rules() {
+    add_rewrite_rule('^produtos/?$', 'index.php?post_type=produtos', 'top');
+}
+add_action('init', 'custom_rewrite_rules');
 
+function add_query_vars_filter($vars) {
+    $vars[] = "category";
+    return $vars;
+}
+add_filter('query_vars', 'add_query_vars_filter');
 ?>
 
