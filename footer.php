@@ -63,7 +63,7 @@
           </div>
           <div class="wk-footer__copy">
             <div class="container text-center">
-              <p>&copy; 2024 - Grupo Pecmotors</p>
+              <p>&copy; 2024 - Grupo Pecmotors Importador e distribuidor oficial do Brasil</p>
               <div class="wkode-logo">
                 <a target="_blank" href="https://wkode.com.br/">
                   <?php
