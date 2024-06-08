@@ -54,12 +54,18 @@
             <hr class="wk-footer__ruler">
           </div>
           <div class="container flex wk-footer__icons">
-            <?php
-            echo file_get_contents(get_theme_file_path('/assets/svg/instagram.svg'));
-            echo file_get_contents(get_theme_file_path('/assets/svg/facebook.svg'));
-            echo file_get_contents(get_theme_file_path('/assets/svg/twitter.svg'));
-            echo file_get_contents(get_theme_file_path('/assets/svg/youtube.svg'));
-            ?>
+            <a target="_blank" href="http://instragram.com/mannolbr"> <?php
+              echo file_get_contents(get_theme_file_path('/assets/svg/instagram.svg')); ?>
+            </a>
+            <a href="#"> <?php
+              echo file_get_contents(get_theme_file_path('/assets/svg/facebook.svg')); ?>
+            </a>
+            <a href="#"> <?php
+              echo file_get_contents(get_theme_file_path('/assets/svg/twitter.svg')); ?>
+            </a>
+            <a target="_blank" href="https://www.youtube.com/@GrupoPecmotors"><?php
+              echo file_get_contents(get_theme_file_path('/assets/svg/youtube.svg')); ?>
+            </a>
           </div>
           <div class="wk-footer__copy">
             <div class="container text-center">
