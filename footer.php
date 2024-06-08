@@ -5,7 +5,7 @@
               <div class="wk-footer__logo">
                 <!-- <img src="<?php echo get_theme_file_uri('assets/img/logo.png'); ?>" alt="logo"> -->
                 <p class="wk-footer__text">
-                  Nossa nova embalagem é um novo visual para sua marca favorita! Nós somos orgulho de apresentar um novo design que combina estilo moderno e funcionalidade. Revisamos o design do rótulo e mudamos para um novo pacote de cores.
+                  A Mannol é uma marca reconhecida mundialmente por seus lubrificantes, aditivos e produtos para veículos. Na Pecmotors, somos a importadora oficial da Mannol no Brasil, garantindo que você tenha acesso aos melhores produtos para cuidar do seu carro. Confie na expertise da Mannol e conte com a Pecmotors para suas necessidades automotivas.
                 </p>
               </div>
             </div>
